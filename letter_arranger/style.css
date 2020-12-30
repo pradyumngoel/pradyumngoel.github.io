@@ -10,81 +10,81 @@ body {
 p {
   text-align: center;
   margin: 0 auto;
-  font-size: 60px;
-  margin-top: 20px;
+  font-size: 3vw;
+  margin-top: 1%;
+}
+
+.main-content > * {
+  margin-top: 5%;
+  display: inline-block;
+  text-align: center;
 }
 
 .unordered--letters {
-  width: 200px;
-  height: 100px;
-
-  display: block;
   color: black;
   border: 5px solid darkgrey;
   background-color: white;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3vw;
 
-  margin-top: 100px;
-  margin-left: 150px;
-  padding: 50px;
-}
-
-.msg1 {
-  margin-top: -150px;
+  width: 13%;
+  height: 100px;
+  padding: 2vw;
+  margin-left: 7%;
 }
 
 .input {
-  width: 200px;
-  height: 100px;
-  border: 5px solid darkgray;
-  font-family: inherit;
-  padding: 50px;
-  font-size: 3rem;
+  color: black;
+  border: 5px solid darkgrey;
+  background-color: white;
+  text-align: center;
+  font-size: 3vw;
 
-  margin-top: -140px;
-  margin-left: 1450px;
+  width: 13%;
+  height: 100px;
+  padding: 2vw;
+  margin-left: 7%;
 }
 
 .check {
   width: 200px;
   height: 100px;
   font-family: inherit;
-  padding: 10px;
-  font-size: 2rem;
+  padding: 0.5vw;
+  font-size: 130%;
 
-  margin-top: -200px;
-  margin-left: 850px;
+  margin-left: 45%;
+  margin-top: 0%;
 }
 
 .msg2 {
   font-size: 2.5rem;
-  margin-top: 100px;
+  margin-top: 5%;
 }
 
 .again {
   width: 200px;
   height: 100px;
   font-family: inherit;
-  padding: 10px;
-  font-size: 2rem;
+  padding: 0.5vw;
+  font-size: 130%;
 
-  margin-left: 853px;
-  margin-top: 30px;
+  margin-left: 45%;
+  margin-top: 2%;
 }
 
 .score {
-  font-size: 2rem;
-  margin-right: 1600px;
+  font-size: 1.7vw;
+  margin-right: 84.5%;
 }
 
 .highscore {
-  font-size: 2rem;
-  margin-right: 1470px;
+  font-size: 1.7vw;
+  margin-right: 86%;
 }
 
 .by {
-  font-size: 1rem;
+  font-size: 0.8vw;
   margin-top: 0px;
-  margin-left: 1600px;
+  margin-left: 85%;
 }

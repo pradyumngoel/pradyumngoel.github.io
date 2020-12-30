@@ -44,7 +44,7 @@ buttonCheck.addEventListener('click', function (e) {
 
     if (score > highscore) {
       highscore = score;
-      elHighScore.textContent = `HighScore: ${highscore}`;
+      elHighScore.textContent = `High: ${highscore}`;
     }
   }
   inputAnswer.value = '';
