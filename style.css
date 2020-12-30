@@ -54,3 +54,13 @@ button:focus {
 .c {
   font-size: 50px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 1000;
+}
+
+a:hover {
+  color: rgb(42, 42, 161);
+}
