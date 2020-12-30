@@ -66,3 +66,7 @@ a {
 a:hover {
   color: rgb(42, 42, 161);
 }
+
+img {
+  width: 90vw;
+}
