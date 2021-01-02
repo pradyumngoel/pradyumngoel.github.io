@@ -14,6 +14,10 @@ body {
   justify-content: center;
 }
 
+.links-tab {
+  transition: transform 0.5s;
+}
+
 .links-tab-1 .links-tab-2 {
   transform: translateY(-50%);
 }
@@ -54,19 +58,47 @@ button:focus {
 }
 
 .c {
-  font-size: 50px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.c:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
 }
 
 a {
   text-decoration: none;
   color: black;
   font-weight: 1000;
+  border-bottom: 1px solid rgb(42, 42, 161) transparent;
+  transition: color 1s, border 1s;
 }
 
 a:hover {
   color: rgb(42, 42, 161);
+  border-bottom: 1px solid rgb(42, 42, 161);
 }
 
 img {
   width: 90vw;
+}
+
+i {
+  font-size: 200%;
+  transition: color 0.21s, opacity 600ms, visibility 600ms;
+}
+
+i:hover {
+  color: #555;
+}
+
+.hidden-i {
+  visibility: none;
+  opacity: 0;
 }

@@ -4,38 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pradyumn Goel's Website</title>
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ionicons.min.css" />
   </head>
   <body>
     <h1>Pradyumn Goel's Website!</h1>
 
+    <i class="ion-ios-home hidden-i"></i>
+
     <div class="links">
-      <button class="links-tab-1" data-tab="1"><span></span>Games</button>
-      <button class="links-tab-2" data-tab="2"><span></span>Programs</button>
+      <button class="links-tab-1 links-tab" data-tab="1">
+        <span>Games</span>
+      </button>
+      <button class="links-tab-2 links-tab" data-tab="2">
+        <span>Programs</span>
+      </button>
     </div>
 
     <hr />
 
     <div class="content1 hidden">
-      <a
-        class="c"
-        href="letter_arranger/index.html"
-        target="_blank"
-        rel="noreferrer noopener"
-        >Letter arranger</a
-      >
-      <img src="img/letter_arranger_img.png" />
+      <a href="letter_arranger/index.html" target="_blank">
+        <div class="c">
+          <img
+            src="img/letter_arranger_img.png"
+            alt="Letter arranger"
+            class="img"
+            style="width: 100%"
+          />
+
+          <div class="container">
+            <h4>
+              <b
+                ><a href="letter_arranger/index.html" target="_blank"
+                  >Letter arranger</a
+                ></b
+              >
+            </h4>
+            <p>&copy; Pradyumn Goel</p>
+          </div>
+        </div>
+      </a>
     </div>
 
     <div class="content2 hidden">
-      <a
-        class="c"
-        href="calc/index.html"
-        target="_blank"
-        rel="noreferrer noopener"
-        >Plus minus</a
-      >
-      <img src="img/calc_img.png" />
+      <a href="calc/index.html" target="_blank">
+        <div class="c">
+          <img
+            src="img/calc_img.png"
+            alt="Calc"
+            class="img"
+            style="width: 100%"
+          />
+
+          <div class="container">
+            <h4>
+              <b><a href="calc/index.html" target="_blank">Calc</a></b>
+            </h4>
+            <p>&copy; Pradyumn Goel</p>
+          </div>
+        </div>
+      </a>
     </div>
 
     <script src="script.js"></script>
