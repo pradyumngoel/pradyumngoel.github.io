@@ -1,12 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+  --color-primary: #27ae60;
+  --color-primary-light: #3beb84;
+  --color-primary-dark: #299154;
+}
 
 body {
   align-items: center;
   text-align: center;
-  color: #222;
+  color: whitesmoke;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background-color: #f3f3f3;
+  background: linear-gradient(#333, #222);
+  width: 97vw;
+  margin: 0;
+}
+
+.start {
+  background-color: rgb(7, 7, 7);
+  padding-bottom: 4rem;
+}
+
+.hero-box {
+  margin-top: -10rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.hero-img {
+  transform: skewY(-5deg);
+  filter: brightness(30%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -5rem;
+  font-size: 10vw;
+  color: var(--color-primary);
+  font-weight: 300;
+}
+
+.link-special {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  z-index: 99999;
+}
+
+.link-special:hover {
+  padding: 0.2rem;
+  background-color: var(--color-primary);
+  color: whitesmoke;
 }
 
 .links {
@@ -15,6 +69,7 @@ body {
 }
 
 .links-tab {
+  margin-bottom: 2rem;
   transition: transform 0.5s;
 }
 
@@ -23,7 +78,6 @@ body {
 }
 
 .links-tab-1 {
-  margin-top: 50px;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   height: 3rem;
@@ -34,7 +88,6 @@ body {
 }
 
 .links-tab-2 {
-  margin-top: 50px;
   margin-left: 100px;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
@@ -60,7 +113,7 @@ button:focus {
 .c {
   margin: 0 auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  transition: all 0.3s;
   width: 40%;
 }
 
@@ -74,15 +127,14 @@ button:focus {
 
 a {
   text-decoration: none;
-  color: black;
-  font-weight: 1000;
+  color: inherit;
   border-bottom: 1px solid rgb(42, 42, 161) transparent;
-  transition: color 1s, border 1s;
+  transition: all 0.8s;
 }
 
 a:hover {
-  color: rgb(42, 42, 161);
-  border-bottom: 1px solid rgb(42, 42, 161);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
 }
 
 img {
@@ -91,14 +143,25 @@ img {
 
 i {
   font-size: 200%;
-  transition: color 0.21s, opacity 600ms, visibility 600ms;
+  color: var(--color-primary-dark);
+  transition: all 0.2s;
 }
 
 i:hover {
-  color: #555;
+  color: var(--color-primary);
 }
 
 .hidden-i {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--color-primary-light);
+}
+
+::selection {
+  color: white;
+  background: var(--color-primary-light);
 }

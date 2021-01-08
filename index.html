@@ -11,75 +11,83 @@
     <title>Pradyumn Goel's Website</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
     <link rel="stylesheet" href="ionicons.min.css" />
   </head>
   <body>
-    <h1>Pradyumn Goel's Website!</h1>
-
-    <i class="ion-ios-home hidden-i"></i>
-
-    <div class="links">
-      <button class="links-tab-1 links-tab" data-tab="1">
-        <span>Games</span>
-      </button>
-      <button class="links-tab-2 links-tab" data-tab="2">
-        <span>Programs</span>
-      </button>
+    <div class="start">
+      <div class="hero-box">
+        <img src="img/hero.jpg" alt="Browser not supported" class="hero-img" />
+        <h1>Pradyumn Goel's Website!</h1>
+      </div>
+      <a href="#section-stuff" class="link-special">See my stuff &darr;</a>
     </div>
 
     <hr />
 
-    <div class="content1 hidden">
-      <a href="letter_arranger/index.html" target="_blank">
-        <div class="c">
-          <img
-            src="img/letter_arranger_img.png"
-            alt="Letter arranger"
-            class="img"
-            style="width: 100%"
-          />
+    <section id="section-stuff">
+      <i class="ion-ios-home hidden-i"></i>
 
-          <div class="container">
-            <h4>
-              <b
-                ><a href="letter_arranger/index.html" target="_blank"
+      <div class="links">
+        <button class="links-tab-1 links-tab links-tab-active" data-tab="1">
+          <span>Games</span>
+        </button>
+        <button class="links-tab-2 links-tab" data-tab="2">
+          <span>Programs</span>
+        </button>
+      </div>
+
+      <div class="content1">
+        <a href="letter_arranger/index.html" target="_blank">
+          <div class="c">
+            <img
+              src="img/letter_arranger_img.png"
+              alt="Letter arranger"
+              class="img"
+              style="width: 100%"
+            />
+
+            <div class="container">
+              <h4>
+                <a href="letter_arranger/index.html" target="_blank"
                   >Letter arranger</a
-                ></b
-              >
-            </h4>
-            <p>&copy; Pradyumn Goel</p>
+                >
+              </h4>
+              <p>&copy; Pradyumn Goel</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <div class="content2 hidden">
-      <a href="calc/index.html" target="_blank">
-        <div class="c">
-          <img
-            src="img/calc_img.png"
-            alt="Calc"
-            class="img"
-            style="width: 100%"
-          />
+      <div class="content2 hidden">
+        <a href="calc/index.html" target="_blank">
+          <div class="c">
+            <img
+              src="img/calc_img.png"
+              alt="Calc"
+              class="img"
+              style="width: 100%"
+            />
 
-          <div class="container">
-            <h4>
-              <b><a href="calc/index.html" target="_blank">Calc</a></b>
-            </h4>
-            <p>&copy; Pradyumn Goel</p>
+            <div class="container">
+              <h4>
+                <b><a href="calc/index.html" target="_blank">Calc</a></b>
+              </h4>
+              <p>&copy; Pradyumn Goel</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <script src="script.js"></script>
+      <p>
+        &copy; Copyright by
+        <a target="_blank" href="https://github.com/pradyumngoel/"
+          >Pradyumn Goel</a
+        >, Don't claim as your own ;)
+      </p>
 
-    <p>
-      &copy; Copyright by
-      <a target="_blank" href="https://github.com/pradyumngoel/"
-        >Pradyumn Goel</a
-      >, Don't claim as your own ;)
-    </p>
+      <script src="script.js"></script>
+    </section>
   </body>
 </html>
