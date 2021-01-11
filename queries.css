@@ -1,2 +1,15 @@
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 600px) {
+  .hero-img {
+    margin-top: 50%;
+  }
+
+  body {
+    width: 96.5vw !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    width: 98vw;
+  }
 }

@@ -13,41 +13,42 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background: linear-gradient(#333, #222);
-  width: 97vw;
+  width: 98.5vw;
   margin: 0;
 }
 
 .start {
   background-color: rgb(7, 7, 7);
   padding-bottom: 4rem;
+  height: 90vh;
+  width: auto;
 }
 
 .hero-box {
   margin-top: -10rem;
   margin-bottom: 3rem;
-  overflow: hidden;
 }
 
 .hero-img {
+  margin-top: 50px;
   transform: skewY(-5deg);
   filter: brightness(30%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/hero.jpg);
-  background-size: cover;
+  width: 70vw;
   background-position: center;
-  height: 100vh;
-  width: auto;
 }
 
 h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin-top: -5rem;
   font-size: 10vw;
   color: var(--color-primary);
   font-weight: 300;
+}
+
+.join {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .link-special {
