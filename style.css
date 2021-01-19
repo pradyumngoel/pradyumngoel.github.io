@@ -74,6 +74,7 @@ h1 {
 }
 
 .links-tab {
+  cursor: pointer;
   margin-bottom: 2rem;
   transition: transform 0.5s;
 }
@@ -122,6 +123,10 @@ button:focus {
   width: 40%;
 }
 
+.c:not(:last-of-type) {
+  margin-bottom: 10rem;
+}
+
 .c:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -147,6 +152,7 @@ img {
 }
 
 i {
+  cursor: pointer;
   font-size: 200%;
   color: var(--color-primary-dark);
   transition: all 0.2s;
