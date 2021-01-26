@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(img/school.png);
+  background-repeat: no-repeat;
+  background-size: 80vw;
+  background-position-x: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  background-color: #c6e7ec;
+}
+
+.pole {
+  height: 75vh;
+
+  position: absolute;
+  top: 10rem;
+  left: 4vw;
+
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 40vw;
+
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.button p {
+  color: whitesmoke;
+}
+
+.btn {
+  width: 6vw;
+
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 7vw;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}
+
+.flashing {
+  animation-name: flash;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.school-by {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 70vw;
+
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.by {
+  margin-right: 5rem;
+}
+
+.me-salute {
+  position: absolute;
+  top: 70vh;
+  left: 89vw;
+}
+
+.hidden {
+  display: none;
+}
+
+audio {
+  display: none;
+}
+
+::selection {
+  background-color: rgba(255, 140, 0, 0.8);
+  color: whitesmoke;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 140, 0, 0.8);
+  color: whitesmoke;
+}
