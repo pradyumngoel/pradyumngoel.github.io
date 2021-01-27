@@ -3,11 +3,11 @@ body {
   padding: 0;
   background-image: url(img/school.png);
   background-repeat: no-repeat;
-  background-size: 80vw;
+  background-size: 150vh;
   background-position-x: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: 700;
   background-color: #c6e7ec;
 }
@@ -28,7 +28,7 @@ body {
   align-items: center;
   flex-direction: column;
 
-  margin-top: 40vw;
+  margin-top: 70vh;
 
   animation-name: fadeIn;
   animation-duration: 3s;
@@ -39,7 +39,7 @@ body {
 }
 
 .btn {
-  width: 6vw;
+  width: 6rem;
 
   cursor: pointer;
 }
@@ -84,11 +84,12 @@ body {
   animation-duration: 3s;
 }
 
-.by {
-  margin-right: 5rem;
+.school-by img {
+  margin-left: 5rem;
 }
 
 .me-salute {
+  height: 12vw;
   position: absolute;
   top: 70vh;
   left: 89vw;
@@ -110,4 +111,24 @@ audio {
 ::-moz-selection {
   background-color: rgba(255, 140, 0, 0.8);
   color: whitesmoke;
+}
+
+@media only screen and (max-width: 75em) {
+  .school-by {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .me-salute {
+    height: 7rem;
+    margin-left: -2vw;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .me-salute {
+    height: 9rem;
+    margin-left: -7rem;
+  }
 }
