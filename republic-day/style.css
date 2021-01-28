@@ -76,9 +76,7 @@ body {
 
 .school-by {
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 70vw;
+  justify-content: center;
 
   animation-name: fadeIn;
   animation-duration: 3s;
@@ -103,6 +101,17 @@ audio {
   display: none;
 }
 
+.fireworks {
+  display: flex;
+  justify-content: center;
+}
+
+.firework {
+  width: 15rem;
+  position: absolute;
+  z-index: 9999;
+}
+
 ::selection {
   background-color: rgba(255, 140, 0, 0.8);
   color: whitesmoke;
@@ -111,12 +120,6 @@ audio {
 ::-moz-selection {
   background-color: rgba(255, 140, 0, 0.8);
   color: whitesmoke;
-}
-
-@media only screen and (max-width: 75em) {
-  .school-by {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -130,5 +133,22 @@ audio {
   .me-salute {
     height: 9rem;
     margin-left: -7rem;
+  }
+
+  .school-by {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .school-by img {
+    margin: 0;
+  }
+
+  .school-by p {
+    font-size: 1rem;
+  }
+
+  .button {
+    margin-top: 50vh;
   }
 }

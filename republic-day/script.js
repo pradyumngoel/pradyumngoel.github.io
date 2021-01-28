@@ -1,6 +1,7 @@
-let sourceNum = 2;
+document.querySelector('.btn-normal').addEventListener('click', function (e) {
+  let sourceNum = 2;
 
-document.querySelector('.btn').addEventListener('click', function (e) {
+  document.querySelector('.audio-place').innerHTML = '';
   document.querySelector('.audio-place').insertAdjacentHTML(
     'afterbegin',
     `<audio controls autoplay>
@@ -17,6 +18,7 @@ document.querySelector('.btn').addEventListener('click', function (e) {
 
       if (sourceNum === 16) {
         document.querySelector('.me-salute').style.display = 'block';
+        document.querySelector('.firework').classList.remove('hidden');
 
         setTimeout(() => {
           document.querySelector('.me-salute').src = 'img/Me-salute-2.png';
@@ -29,5 +31,5 @@ document.querySelector('.btn').addEventListener('click', function (e) {
     }, 10);
   }, 100);
 
-  document.querySelector('.button').style.display = 'none';
+  document.querySelector('.button').classList.add('hidden');
 });
