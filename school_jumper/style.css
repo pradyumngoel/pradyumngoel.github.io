@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+}
+
+.game {
+  width: 100vw;
+  height: 100vh;
+}
+
+.boy {
+  width: 13vw;
+  height: 30vh;
+
+  position: relative;
+  top: 70vh;
+  left: 50px;
+
+  background-image: url(img/boy.PNG);
+  background-size: 13vw 30vh;
+}
+
+.jump {
+  animation: jump 0.7s linear;
+}
+
+.fail {
+  width: 4vw;
+  height: 8vh;
+
+  position: relative;
+  top: 62vh;
+  left: 95vw;
+
+  background-size: 4vw 4vw;
+  background-image: url(img/fail.PNG);
+  background-repeat: no-repeat;
+
+  animation: block 1.4s linear infinite;
+}
+
+img {
+  width: 20vw;
+  position: absolute;
+  top: 5vh;
+  left: 40vw;
+}
+
+@keyframes jump {
+  0% {
+    top: 70vh;
+  }
+
+  30% {
+    top: 30vh;
+  }
+
+  40% {
+    top: 10vh;
+  }
+
+  70% {
+    top: 30vh;
+  }
+
+  100% {
+    top: 70vh;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 95vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
