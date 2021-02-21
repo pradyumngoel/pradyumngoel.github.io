@@ -42,7 +42,7 @@ let isAlive = setInterval(() => {
     }
   }
 
-  if (failLeft < 50 && failLeft > 0 && playerTop >= 448) {
+  if (passLeft < 50 && passLeft > 0 && playerTop >= 448) {
     score += 5;
   }
 }, 10);
