@@ -5,6 +5,8 @@ const gameArea = document.querySelector('.game-area');
 const player = { speed: 10, score: 0 };
 
 const start = function () {
+  player.score = 0;
+
   startScreen.classList.add('hide');
   gameArea.innerHTML = '';
 
@@ -44,7 +46,6 @@ const keys = {
 const endGame = function () {
   player.start = false;
   startScreen.classList.remove('hide');
-  player.score = 0;
 };
 
 const moveAsteroids = function (ship) {
