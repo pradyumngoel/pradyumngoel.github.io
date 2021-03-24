@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(imgs/space.gif);
+  overflow: hidden;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Press Start 2p', Arial, Helvetica, sans-serif;
+}
+
+.ship {
+  width: 16rem;
+  height: 10rem;
+
+  position: absolute;
+  left: 45%;
+  top: 60%;
+
+  background-image: url(imgs/ship.png);
+  background-repeat: no-repeat;
+  background-size: 10rem 10rem;
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.asteroids {
+  width: 10rem;
+  height: 10rem;
+  background: url(imgs/asteroid.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 10rem 10rem;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.game-area {
+  width: 90vw;
+  height: 90vh;
+
+  margin: auto;
+}
+
+.score {
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.start-screen {
+  width: 70rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;
+}
+
+.hide {
+  display: none;
+}
