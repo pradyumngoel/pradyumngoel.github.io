@@ -22,12 +22,16 @@ const start = function () {
   player.x = ship.offsetLeft;
   player.y = ship.offsetTop;
 
-  for (x = 0; x < 4; x++) {
+  for (x = 0; x < 6; x++) {
     const asteroid = document.createElement('div');
     asteroid.setAttribute('class', 'asteroids');
-    asteroid.y = (x + 3) * 350 * -1;
+    asteroid.y = (x + 3) * 60 * -1;
     asteroid.style.top = asteroid.y + 'px';
     asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
+    const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
+    asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
+    asteroid.style.width = asteroidBackgroundSize + 'rem';
+    asteroid.style.height = asteroidBackgroundSize + 'rem';
     gameArea.appendChild(asteroid);
   }
 
@@ -57,12 +61,56 @@ const moveAsteroids = function (ship) {
     }
 
     if (i.y >= 700) {
-      i.y = -300;
-      i.style.left = Math.floor(Math.random() * 90) + 'vw';
+      i.remove();
+
+      const asteroid = document.createElement('div');
+      asteroid.setAttribute('class', 'asteroids');
+      asteroid.y = (x + 3) * 60 * -1;
+      asteroid.style.top = asteroid.y + 'px';
+      asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
+      const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
+      asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
+      asteroid.style.width = asteroidBackgroundSize + 'rem';
+      asteroid.style.height = asteroidBackgroundSize + 'rem';
+      gameArea.appendChild(asteroid);
     }
 
-    i.y += 6;
+    i.y += 5;
     i.style.top = i.y + 'px';
+  });
+};
+
+const moveBullets = function () {
+  const bullets = document.querySelectorAll('.bullets');
+  const asteroids = document.querySelectorAll('.asteroids');
+
+  bullets.forEach(function (i) {
+    if (i.y < 0) {
+      i.remove();
+    }
+
+    i.y -= 10;
+    i.style.top = i.y + 'px';
+
+    asteroids.forEach(function (index) {
+      if (isCollide(i, index)) {
+        index.remove();
+        player.score += 100;
+
+        const asteroid = document.createElement('div');
+        asteroid.setAttribute('class', 'asteroids');
+        asteroid.y = (x + 3) * 60 * -1;
+        asteroid.style.top = asteroid.y + 'px';
+        asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
+        const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
+        asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
+        asteroid.style.width = asteroidBackgroundSize + 'rem';
+        asteroid.style.height = asteroidBackgroundSize + 'rem';
+        gameArea.appendChild(asteroid);
+
+        i.remove();
+      }
+    });
   });
 };
 
@@ -73,6 +121,7 @@ const gamePlay = function () {
 
   if (player.start) {
     moveAsteroids(ship);
+    moveBullets();
 
     if (keys.ArrowUp && player.y > space.top + 200) {
       player.y -= player.speed;
@@ -118,6 +167,17 @@ const isCollide = function (a, b) {
     aRect.left > bRect.right
   );
 };
+
+addEventListener('click', function () {
+  const bullet = document.createElement('div');
+  bullet.setAttribute('class', 'bullets');
+  bullet.y = player.y;
+  bullet.x = player.x;
+  bullet.style.top = bullet.y + 'px';
+  bullet.style.left = bullet.x + 71.6 + 'px';
+  bullet.style.backgroundSize = `5rem 5rem`;
+  gameArea.appendChild(bullet);
+});
 
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);

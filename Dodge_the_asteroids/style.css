@@ -30,12 +30,21 @@ body {
 }
 
 .asteroids {
-  width: 10rem;
-  height: 10rem;
   background: url(imgs/asteroid.png);
   position: absolute;
   background-repeat: no-repeat;
-  background-size: 10rem 10rem;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.bullets {
+  width: 1rem;
+  height: 5rem;
+  background: url(imgs/bullet.png);
+  position: absolute;
+  background-repeat: no-repeat;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
