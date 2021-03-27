@@ -1,8 +1,11 @@
 const score = document.querySelector('.score');
 const startScreen = document.querySelector('.start-screen');
 const gameArea = document.querySelector('.game-area');
+const explosion = document.querySelector('img');
 
 const player = { speed: 10, score: 0 };
+
+let bulletsNum = 10;
 
 const start = function () {
   player.score = 0;
@@ -50,6 +53,8 @@ const keys = {
 const endGame = function () {
   player.start = false;
   startScreen.classList.remove('hide');
+  bulletsNum = 10;
+  explosion.classList.add('hide');
 };
 
 const moveAsteroids = function (ship) {
@@ -60,7 +65,7 @@ const moveAsteroids = function (ship) {
       endGame();
     }
 
-    if (i.y >= 700) {
+    if (i.y >= 900) {
       i.remove();
 
       const asteroid = document.createElement('div');
@@ -73,6 +78,24 @@ const moveAsteroids = function (ship) {
       asteroid.style.width = asteroidBackgroundSize + 'rem';
       asteroid.style.height = asteroidBackgroundSize + 'rem';
       gameArea.appendChild(asteroid);
+    }
+
+    i.y += 5;
+    i.style.top = i.y + 'px';
+  });
+};
+
+const movePowerup = function (ship) {
+  const powerup = document.querySelectorAll('.powerups');
+
+  powerup.forEach(function (i) {
+    if (isCollide(ship, i)) {
+      bulletsNum += 10;
+      i.remove();
+    }
+
+    if (i.y >= 900) {
+      i.remove();
     }
 
     i.y += 5;
@@ -109,6 +132,15 @@ const moveBullets = function () {
         gameArea.appendChild(asteroid);
 
         i.remove();
+
+        explosion.style.left = index.style.left;
+        explosion.style.top = index.style.top;
+
+        explosion.classList.remove('hide');
+
+        setTimeout(() => {
+          explosion.classList.add('hide');
+        }, 20);
       }
     });
   });
@@ -121,6 +153,7 @@ const gamePlay = function () {
 
   if (player.start) {
     moveAsteroids(ship);
+    movePowerup(ship);
     moveBullets();
 
     if (keys.ArrowUp && player.y > space.top + 200) {
@@ -168,16 +201,37 @@ const isCollide = function (a, b) {
   );
 };
 
-addEventListener('click', function () {
-  const bullet = document.createElement('div');
-  bullet.setAttribute('class', 'bullets');
-  bullet.y = player.y;
-  bullet.x = player.x;
-  bullet.style.top = bullet.y + 'px';
-  bullet.style.left = bullet.x + 71.6 + 'px';
-  bullet.style.backgroundSize = `5rem 5rem`;
-  gameArea.appendChild(bullet);
+addEventListener('keydown', e => {
+  if (bulletsNum) {
+    if (e.code === 'Space') {
+      const bullet = document.createElement('div');
+      bullet.setAttribute('class', 'bullets');
+      bullet.y = player.y;
+      bullet.x = player.x;
+      bullet.style.top = bullet.y + 'px';
+      bullet.style.left = bullet.x + 71.6 + 'px';
+      bullet.style.backgroundSize = `5rem 5rem`;
+      gameArea.appendChild(bullet);
+
+      bulletsNum -= 1;
+    }
+  }
 });
 
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
+
+setInterval(() => {
+  for (x = 0; x < 2; x++) {
+    const powerup = document.createElement('div');
+    powerup.setAttribute('class', 'powerups');
+    powerup.y = (x + 3) * 60 * -1;
+    powerup.style.top = powerup.y + 'px';
+    powerup.style.left = Math.floor(Math.random() * 90) + 'vw';
+    const powerupBackgroundSize = 3;
+    powerup.style.backgroundSize = `${powerupBackgroundSize}rem ${powerupBackgroundSize}rem`;
+    powerup.style.width = powerupBackgroundSize + 'rem';
+    powerup.style.height = powerupBackgroundSize + 'rem';
+    gameArea.appendChild(powerup);
+  }
+}, 10000);
