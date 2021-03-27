@@ -1,4 +1,7 @@
 const score = document.querySelector('.score');
+const bulletCount = document.querySelector('.bullet');
+const bulletCountFull = document.querySelector('.bullet-count');
+
 const startScreen = document.querySelector('.start-screen');
 const gameArea = document.querySelector('.game-area');
 const explosion = document.querySelector('img');
@@ -9,6 +12,7 @@ let bulletsNum = 10;
 
 const start = function () {
   player.score = 0;
+  bulletCountFull.classList.remove('hide');
 
   startScreen.classList.add('hide');
   gameArea.innerHTML = '';
@@ -91,6 +95,7 @@ const movePowerup = function (ship) {
   powerup.forEach(function (i) {
     if (isCollide(ship, i)) {
       bulletsNum += 10;
+      bulletCount.textContent = bulletsNum;
       i.remove();
     }
 
@@ -209,11 +214,12 @@ addEventListener('keydown', e => {
       bullet.y = player.y;
       bullet.x = player.x;
       bullet.style.top = bullet.y + 'px';
-      bullet.style.left = bullet.x + 71.6 + 'px';
+      bullet.style.left = bullet.x + 57 + 'px';
       bullet.style.backgroundSize = `5rem 5rem`;
       gameArea.appendChild(bullet);
 
       bulletsNum -= 1;
+      bulletCount.textContent = bulletsNum;
     }
   }
 });
