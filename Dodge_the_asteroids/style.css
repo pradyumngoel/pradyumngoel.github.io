@@ -9,6 +9,7 @@ body {
   font-size: 2rem;
   color: white;
   font-family: 'Press Start 2p', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
 .ship {
