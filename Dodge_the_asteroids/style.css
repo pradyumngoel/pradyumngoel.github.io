@@ -6,14 +6,17 @@
 body {
   background: url(imgs/space.gif);
   overflow: hidden;
-  font-size: 2rem;
+  font-size: 2vw;
   color: white;
   font-family: 'Press Start 2p', Arial, Helvetica, sans-serif;
+
+  width: 100vw;
+  height: 100vh;
 }
 
 .ship {
-  width: 8rem;
-  height: 8rem;
+  width: 8vw;
+  height: 8vw;
 
   position: absolute;
   left: 45%;
@@ -21,7 +24,7 @@ body {
 
   background-image: url(imgs/ship.png);
   background-repeat: no-repeat;
-  background-size: 8rem 8rem;
+  background-size: 8vw 8vw;
 
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
@@ -50,8 +53,8 @@ body {
 }
 
 .bullets {
-  width: 1rem;
-  height: 5rem;
+  width: 1vw;
+  height: 5vw;
   background: url(imgs/bullet.png);
   position: absolute;
   background-repeat: no-repeat;
@@ -74,7 +77,7 @@ body {
 }
 
 .start-screen {
-  width: 70rem;
+  width: 70vw;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -89,6 +92,62 @@ body {
 
 img {
   position: absolute;
+}
+
+.y-arrows {
+  width: 3vw;
+  height: 10vh;
+
+  background-repeat: no-repeat;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.x-arrows {
+  width: 10vh;
+  height: 3vw;
+
+  top: 84vh;
+
+  background-repeat: no-repeat;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.up-arrow {
+  top: 70vh;
+  left: 10vw;
+}
+
+.down-arrow {
+  top: 84vh;
+  left: 10vw;
+}
+
+.left-arrow {
+  left: 1vw;
+}
+
+.right-arrow {
+  left: 15vw;
+}
+
+.shoot {
+  width: 10vw;
+  height: 10vw;
+
+  top: 75vh;
+  left: 85vw;
+
+  background-repeat: no-repeat;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 p {

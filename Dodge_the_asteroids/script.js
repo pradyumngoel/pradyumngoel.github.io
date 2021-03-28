@@ -4,7 +4,14 @@ const bulletCountFull = document.querySelector('.bullet-count');
 
 const startScreen = document.querySelector('.start-screen');
 const gameArea = document.querySelector('.game-area');
-const explosion = document.querySelector('img');
+const explosion = document.querySelector('.explosion');
+
+const upArrow = document.querySelector('.up-arrow');
+const downArrow = document.querySelector('.down-arrow');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+const shoot = document.querySelector('.shoot');
 
 const player = { speed: 10, score: 0 };
 
@@ -36,9 +43,9 @@ const start = function () {
     asteroid.style.top = asteroid.y + 'px';
     asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
     const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
-    asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
-    asteroid.style.width = asteroidBackgroundSize + 'rem';
-    asteroid.style.height = asteroidBackgroundSize + 'rem';
+    asteroid.style.backgroundSize = `${asteroidBackgroundSize}vw ${asteroidBackgroundSize}vw`;
+    asteroid.style.width = asteroidBackgroundSize + 'vw';
+    asteroid.style.height = asteroidBackgroundSize + 'vw';
     gameArea.appendChild(asteroid);
   }
 
@@ -78,9 +85,9 @@ const moveAsteroids = function (ship) {
       asteroid.style.top = asteroid.y + 'px';
       asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
       const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
-      asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
-      asteroid.style.width = asteroidBackgroundSize + 'rem';
-      asteroid.style.height = asteroidBackgroundSize + 'rem';
+      asteroid.style.backgroundSize = `${asteroidBackgroundSize}vw ${asteroidBackgroundSize}vw`;
+      asteroid.style.width = asteroidBackgroundSize + 'vw';
+      asteroid.style.height = asteroidBackgroundSize + 'vw';
       gameArea.appendChild(asteroid);
     }
 
@@ -131,9 +138,9 @@ const moveBullets = function () {
         asteroid.style.top = asteroid.y + 'px';
         asteroid.style.left = Math.floor(Math.random() * 90) + 'vw';
         const asteroidBackgroundSize = Math.random() * (10 - 3) + 3;
-        asteroid.style.backgroundSize = `${asteroidBackgroundSize}rem ${asteroidBackgroundSize}rem`;
-        asteroid.style.width = asteroidBackgroundSize + 'rem';
-        asteroid.style.height = asteroidBackgroundSize + 'rem';
+        asteroid.style.backgroundSize = `${asteroidBackgroundSize}vw ${asteroidBackgroundSize}vw`;
+        asteroid.style.width = asteroidBackgroundSize + 'vw';
+        asteroid.style.height = asteroidBackgroundSize + 'vw';
         gameArea.appendChild(asteroid);
 
         i.remove();
@@ -214,7 +221,7 @@ addEventListener('keydown', e => {
       bullet.y = player.y;
       bullet.x = player.x;
       bullet.style.top = bullet.y + 'px';
-      bullet.style.left = bullet.x + 57 + 'px';
+      bullet.style.left = bullet.x + 24 + 'px';
       bullet.style.backgroundSize = `5rem 5rem`;
       gameArea.appendChild(bullet);
 
@@ -226,6 +233,38 @@ addEventListener('keydown', e => {
 
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
+
+upArrow.addEventListener('click', () => {
+  player.y -= 50;
+});
+
+downArrow.addEventListener('click', () => {
+  player.y += 50;
+});
+
+leftArrow.addEventListener('click', () => {
+  player.x -= 50;
+});
+
+rightArrow.addEventListener('click', () => {
+  player.x += 50;
+});
+
+shoot.addEventListener('click', () => {
+  if (bulletsNum) {
+    const bullet = document.createElement('div');
+    bullet.setAttribute('class', 'bullets');
+    bullet.y = player.y;
+    bullet.x = player.x;
+    bullet.style.top = bullet.y + 'px';
+    bullet.style.left = bullet.x + 24 + 'px';
+    bullet.style.backgroundSize = `5rem 5rem`;
+    gameArea.appendChild(bullet);
+
+    bulletsNum -= 1;
+    bulletCount.textContent = bulletsNum;
+  }
+});
 
 setInterval(() => {
   for (x = 0; x < 2; x++) {
