@@ -1,59 +1,97 @@
-const boy = document.querySelector('.boy');
-const fail = document.querySelector('.fail');
-const pass = document.querySelector('.pass');
-const scoreText = document.querySelector('.score');
+let boy;
+const Boy = class {
+  constructor() {
+    this.x = 50;
+    this.y = height - 150;
+    this.velocity = 0;
+    this.gravity = 1.5;
+  }
 
-let score = 0;
+  jump() {
+    if (this.y == height - 150) this.velocity = -30;
+  }
 
-const jump = function () {
-  if (boy.classList != 'jump') {
-    boy.classList.add('jump');
-    pass.style.top = Math.floor(Math.random() * 448 + 448) + 'px';
+  move() {
+    this.y += this.velocity;
+    this.velocity += this.gravity;
+    this.y = constrain(this.y, 0, height - 150);
+  }
 
-    setTimeout(() => {
-      boy.classList.remove('jump');
-    }, 400);
+  hits(obj) {
+    return collideRectRect(this.x, this.y, 110, 150, obj.x, obj.y, 100, 100);
+  }
+
+  show() {
+    image(boyImg, this.x, this.y, 110, 150);
   }
 };
 
-let isAlive = setInterval(() => {
-  let collided = false;
+let fail;
+let failSpeed = 10;
+const Fail = class {
+  constructor() {
+    this.x = width;
+    this.y = height - 100;
+  }
 
-  score++;
-  scoreText.textContent = `Score: ${score}`;
+  move() {
+    this.x -= failSpeed;
+  }
 
-  let playerTop = parseInt(
-    window.getComputedStyle(boy).getPropertyValue('top')
-  );
+  show() {
+    image(failImg, this.x, this.y, 100, 100);
+  }
+};
 
-  let failLeft = parseInt(
-    window.getComputedStyle(fail).getPropertyValue('left')
-  );
+setInterval(() => {
+  failSpeed++;
+}, 30000);
 
-  let passLeft = parseInt(
-    window.getComputedStyle(pass).getPropertyValue('left')
-  );
+let fails = [];
 
-  if (failLeft < 50 && failLeft > 0 && playerTop >= 448) {
-    collided = true;
+let boyImg;
+let failImg;
+let gameOverImg;
 
-    if (collided) {
-      gameOver();
+function preload() {
+  boyImg = loadImage('img/boy.PNG');
+  failImg = loadImage('img/fail.PNG');
+  gameOverImg = loadImage('img/game_over.PNG');
+}
+
+function setup() {
+  createCanvas(innerWidth, innerHeight);
+  boy = new Boy();
+
+  let failTimer = random(800) + 700;
+  setInterval(() => {
+    fails.push(new Fail());
+    failTimer = random(700) + 500;
+  }, failTimer);
+}
+
+function keyPressed() {
+  if (key == ' ') {
+    boy.jump();
+  }
+}
+
+function mouseClicked() {
+  boy.jump();
+}
+
+function draw() {
+  background(30);
+  boy.show();
+  boy.move();
+
+  for (let f of fails) {
+    f.move();
+    f.show();
+
+    if (boy.hits(f)) {
+      image(gameOverImg, innerWidth / 2 - 125, innerHeight / 4, 250, 250);
+      noLoop();
     }
   }
-
-  if (passLeft < 50 && passLeft > 0 && playerTop >= 448) {
-    score += 5;
-  }
-}, 10);
-
-const gameOver = function () {
-  document.querySelector('img').classList.remove('hidden');
-  fail.classList.add('hidden');
-  boy.classList.add('hidden');
-  pass.classList.add('hidden');
-  clearInterval(isAlive);
-};
-
-window.addEventListener('keydown', jump);
-window.addEventListener('click', jump);
+}
