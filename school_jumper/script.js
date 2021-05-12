@@ -5,10 +5,14 @@ const Boy = class {
     this.y = height - 150;
     this.velocity = 0;
     this.gravity = 1.5;
+    this.score = 0;
   }
 
   jump() {
-    if (this.y == height - 150) this.velocity = -30;
+    if (this.y == height - 150) {
+      this.velocity = -30;
+      this.score++;
+    }
   }
 
   move() {
@@ -53,10 +57,14 @@ let boyImg;
 let failImg;
 let gameOverImg;
 
+let gameFont;
+
 function preload() {
   boyImg = loadImage('img/boy.PNG');
   failImg = loadImage('img/fail.PNG');
   gameOverImg = loadImage('img/game_over.PNG');
+
+  gameFont = loadFont('PressStart2P-Regular.ttf');
 }
 
 function setup() {
@@ -84,6 +92,13 @@ function draw() {
   background(30);
   boy.show();
   boy.move();
+
+  fill(255);
+
+  textSize(40);
+  textFont(gameFont);
+  text(boy.score, width / 2, height / 5);
+  textAlign(CENTER);
 
   for (let f of fails) {
     f.move();
