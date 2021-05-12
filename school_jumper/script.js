@@ -6,6 +6,7 @@ const Boy = class {
     this.velocity = 0;
     this.gravity = 1.5;
     this.score = 0;
+    this.bombs = 3;
   }
 
   jump() {
@@ -56,6 +57,7 @@ let fails = [];
 let boyImg;
 let failImg;
 let gameOverImg;
+let bombImg;
 
 let gameFont;
 
@@ -63,6 +65,7 @@ function preload() {
   boyImg = loadImage('img/boy.PNG');
   failImg = loadImage('img/fail.PNG');
   gameOverImg = loadImage('img/game_over.PNG');
+  bombImg = loadImage('img/bomb.PNG');
 
   gameFont = loadFont('PressStart2P-Regular.ttf');
 }
@@ -76,16 +79,36 @@ function setup() {
     fails.push(new Fail());
     failTimer = random(700) + 500;
   }, failTimer);
+
+  setInterval(() => {
+    boy.bombs++;
+  }, 60000);
 }
 
 function keyPressed() {
   if (key == ' ') {
     boy.jump();
   }
+
+  if (key == 'b') {
+    if (boy.bombs != 0) {
+      boy.bombs--;
+      fails = [];
+    }
+  }
+}
+
+function mousePressed() {
+  boy.jump();
 }
 
 function mouseClicked() {
-  boy.jump();
+  if (dist(mouseX, mouseY, width - 70, 20) < 50) {
+    if (boy.bombs != 0) {
+      fails = [];
+      boy.bombs--;
+    }
+  }
 }
 
 function draw() {
@@ -99,6 +122,13 @@ function draw() {
   textFont(gameFont);
   text(boy.score, width / 2, height / 5);
   textAlign(CENTER);
+
+  textSize(40);
+  textFont(gameFont);
+  text(`Bombs: ${boy.bombs}`, 190, 70);
+  textAlign(CENTER);
+
+  image(bombImg, width - 70, 20, 50, 50);
 
   for (let f of fails) {
     f.move();
