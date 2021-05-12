@@ -133,7 +133,7 @@ button:focus {
 }
 
 .c:not(:last-of-type) {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .c:hover {
