@@ -5,6 +5,7 @@ const Boy = class {
     this.y = height - 150;
     this.velocity = 0;
     this.gravity = 1.5;
+    this.lives = 3;
     this.score = 0;
     this.bombs = 3;
   }
@@ -118,9 +119,9 @@ function draw() {
 
   fill(255);
 
-  textSize(40);
+  textSize(30);
   textFont(gameFont);
-  text(boy.score, width / 2, height / 5);
+  text(`Score: ${boy.score}  Lives: ${boy.lives}`, width / 2, height / 5);
   textAlign(CENTER);
 
   textSize(40);
@@ -135,8 +136,14 @@ function draw() {
     f.show();
 
     if (boy.hits(f)) {
-      image(gameOverImg, innerWidth / 2 - 125, innerHeight / 4, 250, 250);
-      noLoop();
+      if (boy.lives == 0) {
+        image(gameOverImg, innerWidth / 2 - 125, innerHeight / 4, 250, 250);
+        noLoop();
+      } else {
+        fails = [];
+        boy.bombs = 3;
+        boy.lives--;
+      }
     }
   }
 }
