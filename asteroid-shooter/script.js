@@ -109,11 +109,11 @@ let asteroidImg;
 let spaceImg;
 let bulletPackImg;
 function preload() {
-  shipImg = loadImage('imgs/ship.png');
-  bulletImg = loadImage('imgs/bullet.png');
-  asteroidImg = loadImage('imgs/asteroid.png');
+  shipImg = loadImage('imgs/ship.PNG');
+  bulletImg = loadImage('imgs/bullet.PNG');
+  asteroidImg = loadImage('imgs/asteroid.PNG');
   spaceImg = loadImage('imgs/space.gif');
-  bulletPackImg = loadImage('imgs/bullet_pack.png');
+  bulletPackImg = loadImage('imgs/bullet_pack.PNG');
 }
 
 function start() {
