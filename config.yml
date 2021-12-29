@@ -1,0 +1,53 @@
+baseURL: ""
+languageCode: en-us
+title: Pradyumn Goel's Blog
+theme: PaperMod
+
+params:
+  defaultTheme: dark
+
+  homeInfoParams:
+    Title: "Hello, Whoever you are!"
+    Content: "Welcome to my blog, I talk about some RANDOM stuff so idk just be here and read what I post"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/pradyumngoel"
+    - name: email
+      url: "https://mail.google.com"
+
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: stories
+      name: Stories
+      url: /Categories/Stories/
+      weight: 30
+    - identifier: projects
+      name: Projects
+      url: /Categories/Projects/
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /Categories/Blogging/
+      weight: 20
+    - identifier: categories
+      name: Categories
+      url: /Categories/
+      weight: 40
+    - identifier: tags
+      name: Tags
+      url: /Tags/
+      weight: 50
+    - identifier: archives
+      name: Archives
+      url: /Archives/
+      weight: 60
+    - identifier: aboutme
+      name: About Me
+      url: /AboutMe/
+      weight: 70
