@@ -3,7 +3,7 @@ title: "About Me"
 url: "/aboutme/"
 summary: aboutme
 cover:
-  image: img/me.png
+  image: /img/me.png
   alt: "me"
 ---
 

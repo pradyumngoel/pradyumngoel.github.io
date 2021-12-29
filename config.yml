@@ -13,8 +13,6 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/pradyumngoel"
-    - name: email
-      url: "https://mail.google.com"
 
   ShowBreadCrumbs: true
   ShowReadingTime: true
@@ -35,10 +33,6 @@ menu:
       name: Blog
       url: /Categories/Blogging/
       weight: 20
-    - identifier: categories
-      name: Categories
-      url: /Categories/
-      weight: 40
     - identifier: tags
       name: Tags
       url: /Tags/

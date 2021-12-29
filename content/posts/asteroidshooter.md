@@ -3,7 +3,7 @@ title: "Asteroid Shooter, An easy to play game in which you have to dodge and bl
 date: 2021-12-29T18:27:44+05:30
 draft: false
 cover:
-  image: img/asteroid_dodge_img.png
+  image: /img/asteroid_dodge_img.png
   alt: "asteroid shooter img"
 categories: "Projects"
 ---

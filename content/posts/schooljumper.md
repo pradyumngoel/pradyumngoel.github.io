@@ -3,7 +3,7 @@ title: "School Jumper, A chrome dino game based game"
 date: 2021-12-29T18:27:44+05:30
 draft: false
 cover:
-  image: img/school-jumper_img.png
+  image: /img/school-jumper_img.png
   alt: "school jumper img"
 categories: "Projects"
 ---

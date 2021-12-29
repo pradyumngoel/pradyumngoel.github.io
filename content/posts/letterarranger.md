@@ -3,7 +3,7 @@ title: "Letter Arranger, my first game in javascript"
 date: 2021-12-29T18:27:44+05:30
 draft: false
 cover:
-  image: img/la_img.png
+  image: /img/la_img.png
   alt: "letter arranger img"
 categories: "Projects"
 ---

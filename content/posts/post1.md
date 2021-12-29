@@ -3,7 +3,7 @@ title: "Bedwars Hoverboard first try lucky block"
 date: 2021-12-28T16:39:26+05:30
 draft: false
 cover:
-  image: img/lel.png
+  image: /img/lel.png
   alt: "lel"
   caption: "FIRST TRY HOVERBOARD"
 tags: ["bedwars", "roblox"]
