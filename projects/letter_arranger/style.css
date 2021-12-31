@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 25px;
+}
+
+p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 3vw;
+  margin-top: 1%;
+}
+
+.main-content > * {
+  margin-top: 5%;
+  display: inline-block;
+  text-align: center;
+}
+
+.unordered--letters {
+  color: black;
+  border: 5px solid darkgrey;
+  background-color: white;
+  text-align: center;
+  font-size: 3vw;
+
+  width: 13%;
+  height: 100px;
+  padding: 2vw;
+  margin-left: 7%;
+}
+
+.input {
+  color: black;
+  border: 5px solid darkgrey;
+  background-color: white;
+  text-align: center;
+  font-size: 3vw;
+
+  width: 13%;
+  height: 100px;
+  padding: 2vw;
+  margin-left: 7%;
+}
+
+.check {
+  width: 200px;
+  height: 100px;
+  font-family: inherit;
+  padding: 0.5vw;
+  font-size: 130%;
+
+  margin-left: 45%;
+  margin-top: 0%;
+}
+
+.msg2 {
+  font-size: 2.5rem;
+  margin-top: 5%;
+}
+
+.again {
+  width: 200px;
+  height: 100px;
+  font-family: inherit;
+  padding: 0.5vw;
+  font-size: 130%;
+
+  margin-left: 45%;
+  margin-top: 2%;
+}
+
+.score {
+  font-size: 1.7vw;
+  margin-right: 84.5%;
+}
+
+.highscore {
+  font-size: 1.7vw;
+  margin-right: 86%;
+}
+
+.by {
+  font-size: 0.8vw;
+  margin-top: 0px;
+  margin-left: 85%;
+}
