@@ -1,6 +1,6 @@
-baseURL: ""
+baseURL: "https://pradyumngoel.com/"
 languageCode: en-us
-title: Pradyumn Goel's Blog
+title: Pradyumn Goel's Website
 theme: PaperMod
 
 params:
@@ -8,7 +8,7 @@ params:
 
   homeInfoParams:
     Title: "Hello, Whoever you are!"
-    Content: "Welcome to my blog, I talk about some RANDOM stuff so idk just be here and read what I post"
+    Content: "Welcome to my site, Where I talk about some gaming stuff and post my projectss."
 
   socialIcons:
     - name: github
