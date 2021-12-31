@@ -2,6 +2,7 @@
 title: "New Year's Eve Gaming"
 date: 2021-12-31T15:28:59+05:30
 draft: false
+categories: ["Blogging"]
 ---
 
 Today's New Year's Gaming was EPIC. I just got prestige 2 :D. Im going to get some levels and just spam sbr (Steel Ball Run)
