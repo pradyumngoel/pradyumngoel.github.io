@@ -6,7 +6,17 @@
     <description>Recent content on Pradyumn Goel&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Feb 2022 17:09:36 +0530</lastBuildDate><atom:link href="https://pradyumngoel.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 May 2022 21:16:15 +0530</lastBuildDate><atom:link href="https://pradyumngoel.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Started Coding in Flutter</title>
+      <link>https://pradyumngoel.com/posts/fluttercoding/</link>
+      <pubDate>Mon, 09 May 2022 21:16:15 +0530</pubDate>
+      
+      <guid>https://pradyumngoel.com/posts/fluttercoding/</guid>
+      <description>I started coding in dart and flutter and have already made a lot of progress. I created my own Task Manager app. I didn&amp;rsquo;t publish it yet though.
+Flutter may seem difficult to understand at first but then it gets really easy.</description>
+    </item>
+    
     <item>
       <title>Got OP in DBU</title>
       <link>https://pradyumngoel.com/posts/got-op-in-dbu/</link>

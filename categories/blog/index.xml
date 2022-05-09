@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Pradyumn Goel&#39;s Website</title>
+    <link>https://pradyumngoel.com/categories/blog/</link>
+    <description>Recent content in Blog on Pradyumn Goel&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 May 2022 21:16:15 +0530</lastBuildDate><atom:link href="https://pradyumngoel.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Started Coding in Flutter</title>
+      <link>https://pradyumngoel.com/posts/fluttercoding/</link>
+      <pubDate>Mon, 09 May 2022 21:16:15 +0530</pubDate>
+      
+      <guid>https://pradyumngoel.com/posts/fluttercoding/</guid>
+      <description>I started coding in dart and flutter and have already made a lot of progress. I created my own Task Manager app. I didn&amp;rsquo;t publish it yet though.
+Flutter may seem difficult to understand at first but then it gets really easy.</description>
+    </item>
+    
+  </channel>
+</rss>
